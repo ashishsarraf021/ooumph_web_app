@@ -1,0 +1,49 @@
+.storyImg {
+  background-image: linear-gradient(
+    130deg,
+    hsl(348deg 82% 71%) 0%,
+    hsl(36deg 100% 66%) 25%,
+    hsl(75deg 71% 63%) 50%,
+    hsl(170deg 100% 42%) 75%,
+    hsl(230deg 62% 57%) 100%
+  );
+}
+
+.slider {
+  background: linear-gradient(to right, #3b82f6, #9333ea, #ff00c2);
+  height: 1px;
+  cursor: pointer;
+  position: relative;
+}
+
+.slider-thumb {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  transition: left 0.2s;
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.emoji-button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.emoji-button:hover {
+  transform: scale(1.2); 
+}
+
+.emoji-button.selected {
+  transform: scale(1.4); 
+}
+

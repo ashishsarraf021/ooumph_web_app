@@ -1,0 +1,13 @@
+.icon {
+  display: inline-block; /* or inline, block, etc. depending on your layout */
+  background: linear-gradient(
+    130deg,
+    hsl(348, 82%, 71%) 0%,
+    hsl(36, 100%, 66%) 25%,
+    hsl(75, 71%, 63%) 50%,
+    hsl(170, 100%, 42%) 75%,
+    hsl(230, 62%, 57%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}

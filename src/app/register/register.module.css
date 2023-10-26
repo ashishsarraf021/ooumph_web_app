@@ -1,0 +1,250 @@
+/* RegistrationPage.module.css */
+
+/* Overall container styling */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Left container styling */
+.leftContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Adjusted */
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.image {
+  margin-inline: auto;
+  height: 110px;
+  object-fit: contain;
+  padding: 6px;
+  background-color: #f5f5f5;
+  border-radius: 10rem;
+  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
+}
+
+/* Right container styling */
+.rightContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right content container styling */
+.rightContentContainer {
+  text-align: center;
+}
+
+/* Title styling */
+.title {
+  margin-inline: auto;
+  font-size: 2.6rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--color-text-light-grey);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow effect */
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 1rem 0;
+}
+
+/* Input field styling */
+
+.input {
+  padding: 1.3rem 2rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  width: 300px;
+  outline: none;
+  background-color: #f0f4f8;
+  box-shadow: inset 0px 0px 6px 3px rgba(0, 0, 0, 0.12);
+  color: var(--color-text-light-grey);
+}
+
+.input:focus {
+  outline: 1px solid rgb(216, 216, 216);
+}
+
+/* Button styling */
+/* Default styles for .container-button */
+/* Default styles for .container-button */
+/* .containerButton {
+  background-image: linear-gradient(to right, #00ff00, #ff0000);
+  border-radius: 25px;
+  text-align: center;
+  background-color: #e0e5ec;
+} */
+
+/* Default styles for .btn-primary */
+.btnPrimary {
+  background-color: white;
+  color: black;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Default styles for ::before pseudo-element */
+.btn-primary::before {
+  content: "";
+  border: 3px solid transparent;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+/* Hover styles for .btn-primary */
+.btnPrimary:hover {
+  background-color: rgb(224, 235, 248);
+}
+
+/* Company name styling */
+.companyName {
+  display: inline-block; /* Make each letter a separate block */
+  font-size: 5rem;
+  font-weight: bolder;
+  color: #f5f5f5;
+  -webkit-text-stroke: 0.2px rgb(255, 255, 255);
+  text-shadow: 2px 0px 5px #a7a7a7;
+  letter-spacing: 2px;
+}
+
+.auth-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 20px; /* Adjust the gap between icons as needed */
+}
+
+.regText {
+  color: var(--color-text-light-grey);
+  font-size: 1.5rem;
+}
+
+.signIn {
+  color: var(--color-text-light-grey);
+  font-size: 1.7rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.socialIcon {
+  font-size: 40px;
+  margin: 0 10px;
+  color: var(--color-text-light-grey);
+  cursor: pointer; /* Set the icon color */
+  padding: 6px;
+  background-color: #f7f3f3;
+  border-radius: 3rem;
+  box-shadow: 2px 5px 22px rgba(0, 0, 0, 0.199);
+  margin-top: 1rem;
+}
+.social-text {
+  color: black;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+/* Styles for the toggle button */
+.toggleButton {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Styles for the toggle circle */
+.toggleCircle {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  transition: left 0.3s, background-color 0.3s;
+}
+
+/* Styles when the toggle is accepted */
+.accepted {
+  background-color: green;
+}
+
+.accepted .toggleCircle {
+  left: 27px;
+}
+.toggleContainer {
+  margin-block: 5px;
+  display: flex;
+  align-items: center;
+}
+/* Style for the toggle text */
+.toggleText {
+  color: var(--color-text-light-grey);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px; /* Adjust this value according to your design */
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+/* Style for the accepted text */
+.acceptedText {
+  color: green; /* Adjust text color for accepted state */
+}
+
+.continueBtn {
+  background-image: linear-gradient(
+    130deg,
+    hsl(348deg 82% 71%) 0%,
+    hsl(36deg 100% 66%) 25%,
+    hsl(75deg 71% 63%) 50%,
+    hsl(170deg 100% 42%) 75%,
+    hsl(230deg 62% 57%) 100%
+  );
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .container-button {
+    height: 10vh; /* Adjust height for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
+    margin-left: 10px;
+    margin-bottom: 8px;
+  }
+
+  .btn-primary {
+    padding: 1.5rem 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    width: 100%;
+    margin-left: 0;
+  }
+}

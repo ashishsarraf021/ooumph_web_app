@@ -1,0 +1,13 @@
+.nav {
+  background-color: #f7f7f7;
+}
+.ooumph {
+  display: inline-block; /* Make each letter a separate block */
+  font-size: 26px;
+  font-weight: bolder;
+  color: #f5f5f5;
+  -webkit-text-stroke: 0.2px rgb(255, 255, 255);
+  text-shadow: 2px 0px 5px #a7a7a7;
+  letter-spacing: 2px;
+  
+}

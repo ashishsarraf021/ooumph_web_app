@@ -1,0 +1,88 @@
+// Post start
+
+                {/* <div className="my-11 ">
+                      <div className="flex flex-row mb-2 justify-center w-96 gap-10 text-gray-500">
+                        <p className="text-xl italic cursor-pointer">
+                          Vibers: 5.2k
+                        </p>
+                        <p className="text-xl italic cursor-pointer">
+                          Posts: 25
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center rounded-full shadow-inner justify-center gap-4 bg-gray-100 w-96 h-36">
+                        <div className="flex flex-row justify-between space-x-9 shadow-inner bg-white rounded-full p-1">
+                          <p className="flex items-center justify-center font-bold text-gray-600 bg-white h-16 w-20 rounded-full shadow-xl cursor-pointer">
+                            15
+                          </p>
+                          <p className="flex items-center justify-center font-bold text-gray-600 bg-white h-16 w-20 rounded-full shadow-xl cursor-pointer">
+                            2.3k
+                          </p>
+                          <p className="flex items-center justify-center font-bold text-gray-600 bg-white h-16 w-20 rounded-full shadow-xl cursor-pointer">
+                            2.3k
+                          </p>
+                        </div>
+                        <div className="flex flex-row justify-between space-x-7">
+                          <p className="text-2xl text-gray-600 cursor-pointer">
+                            Inner
+                          </p>
+                          <p className="text-2xl text-gray-600 cursor-pointer">
+                            Outer
+                          </p>
+                          <p className="text-2xl text-gray-600 cursor-pointer">
+                            Universe
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row overflow-scroll gap-7 h-40 mt-11">
+                      <div className="flex flex-col items-center justify-center border-2 border-white bg-gray-100 overflow-hidden w-52 h-32 rounded-3xl shadow-xl cursor-pointer">
+                        <IoIosPeople className="text-5xl text-gray-600" />
+                        <p className="text-xl mt-1 font-medium text-gray-400">
+                          People
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center justify-center border-2 border-white bg-gray-100 w-52 h-32 rounded-3xl shadow-xl cursor-pointer">
+                        <MdOutlineTopic className="text-5xl text-gray-600" />
+                        <p className="text-xl mt-1 font-medium text-gray-400">
+                          Content
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center justify-center border-2 border-white bg-gray-100 w-52 h-32 rounded-3xl shadow-xl cursor-pointer">
+                        <MdOutlineHolidayVillage className="text-5xl text-gray-600" />
+                        <p className="text-xl mt-1 font-medium text-gray-400">
+                          Community
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center justify-center border-2 border-white bg-gray-100 w-52 h-32 rounded-3xl shadow-xl cursor-pointer">
+                        <AiOutlineShoppingCart className="text-5xl text-gray-600" />
+                        <p className="text-xl mt-1 font-medium text-gray-400">
+                          Shop
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center justify-center border-2 border-white bg-gray-100 w-52 h-32 rounded-3xl shadow-xl cursor-pointer">
+                        <GiBlackBook className="text-5xl text-gray-600" />
+                        <p className="text-xl mt-1 font-medium text-gray-400">
+                          Diary
+                        </p>
+                      </div>
+                    </div> */}
+
+
+//Engagement section
+
+// mutation MyMutation($postId: Int!, $reaction: String!, $vibe: Float!) {
+//   createLike(postId: $postId, reaction: $reaction, vibe: $vibe) {
+//     like {
+//       post {
+//         comments {
+//           user {
+//             firstName
+//             lastName
+//             profilePic
+//             username
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
