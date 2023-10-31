@@ -8,6 +8,9 @@ import UploadStory from "../uploadStory/uploadStory";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { useMutation, gql } from "@apollo/client";
 
+import  { CREATE_REACTION_MUTATION } from "../../../graphql/mutations"; // Import mutations
+import { VIBES_QUERY, GET_MY_STORY, USER_PROFILE_QUERY } from "../../../graphql/querues"; 
+
 const storyClient = new ApolloClient({
   uri: process.env.REACT_APP_AUTH_GRAPHQL_URL,
   cache: new InMemoryCache(),
@@ -17,55 +20,6 @@ const vibesClient = new ApolloClient({
   uri: process.env.REACT_APP_VIBES_GRAPHQL_URL,
   cache: new InMemoryCache(),
 });
-
-const CREATE_REACTION_MUTATION = gql`
-  mutation MyMutation2($reaction: String!, $storyId: ID!, $vibe: Float!) {
-    createStoryReaction(reaction: $reaction, storyId: $storyId, vibe: $vibe) {
-      reaction {
-        id
-      }
-    }
-  }
-`;
-
-
-const VIBES_QUERY = gql`
-  query VibeList {
-    vibeList {
-      id
-      name
-    }
-  }
-`;
-
-const GET_MY_STORY = gql`
-  query GetMyStory {
-    getMyStory {
-      id
-      title
-      multipleimageSet {
-        createdOn
-        fileType
-        id
-        image
-      }
-    }
-  }
-`;
-
-// Query for user profile and name
-const USER_PROFILE_QUERY = gql`
-  query MyQuery {
-    whoami {
-      firstName
-      username
-      lastName
-      profile {
-        profilePic
-      }
-    }
-  }
-`;
 
 // Retrieve the authentication token from local storage
 

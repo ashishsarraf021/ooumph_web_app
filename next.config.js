@@ -4,6 +4,14 @@ const withPWA = require('next-pwa')({
     skipWaiting: true,
     disable: process.env.ENV === "PROD" ? false : true,
 })
+
+module.exports = withPWA({
+    reactStrictMode: true,
+    webpack: (config) => {
+        config.resolve.fallback = { fs: false };
+        return config;
+    },
+});
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,

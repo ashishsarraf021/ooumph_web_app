@@ -27,99 +27,15 @@ import {
   FaPlus,
   FaRegUser,
 } from "react-icons/fa";
+
+import {GET_USER_PROFILE,WHOAMI_QUERY,VIBES_QUERY} from "../../../graphql/querues";
+import {SEND_CONNECTION_REQUEST,DELETE_CONNECTION_REQUEST ,ACCEPT_CONNECTION_REQUEST} from "../../../graphql/mutations";
 import { FiPlus } from "react-icons/fi";
 
 const defaultUser = "/assets/defaultuser.png"
 const bgImage = "/assets/ooumph_logo.webp";
 
 // Define the GraphQL query for user profile
-const GET_USER_PROFILE = gql`
-  query GetUserProfile($username: String!) {
-    userProfile(username: $username) {
-      connection {
-        connectionStatus
-        id
-        acceptedConnectionsCount
-        receiver {
-          username
-        }
-      }
-      user {
-        username
-        firstName
-        lastName
-        email
-        profile {
-          bio
-          college
-          born
-          profilePic
-        }
-        postSet {
-          postTitle
-          postText
-          postfilesSet {
-            file
-          }
-        }
-      }
-    }
-  }
-`;
-
-// Define the GraphQL mutation for sending a connection request
-const SEND_CONNECTION_REQUEST = gql`
-  mutation SendConnectionRequest(
-    $connectionType: String!
-    $receiverUsername: String!
-  ) {
-    sendConnectionRequest(
-      connectionType: $connectionType
-      receiverUsername: $receiverUsername
-    ) {
-      successMessage
-    }
-  }
-`;
-
-// Define the GraphQL mutation for deleting a connection
-const DELETE_CONNECTION_REQUEST = gql`
-  mutation DeleteConnectionRequest($connectionId: Int!) {
-    deleteConnection(id: $connectionId) {
-      success
-    }
-  }
-`;
-
-// Define the GraphQL mutation for accepting a connection
-const ACCEPT_CONNECTION_REQUEST = gql`
-  mutation AcceptConnectionRequest($connectionId: Int!) {
-    updateConnection(id: $connectionId, updateTo: "Accepted") {
-      connection {
-        id
-      }
-    }
-  }
-`;
-
-// Define the GraphQL query to know Who Am I i.e username of user login
-const WHOAMI_QUERY = gql`
-  query WhoAmI {
-    whoami {
-      username
-    }
-  }
-`;
-
-// Define the GraphQL query to get list of available vibes
-const VIBES_QUERY = gql`
-  query VibeList {
-    vibeList {
-      id
-      name
-    }
-  }
-`;
 
 const UserProfile = (props) => {
   const username = props.slug.replace("%", '')
